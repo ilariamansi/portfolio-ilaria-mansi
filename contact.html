@@ -52,38 +52,41 @@
   <!-- CONTENUTO PAGINA -->
   <main class="contact">
   <section class="uxSection uxSection--hero" aria-label="Contact">
-    <div class="container uxGrid2">
-      <div class="uxCol">
-        <p class="uxKicker">Contact</p>
-        <h1 class="uxH1">Entriamo in contatto.</h1>
-        <p class="uxSub">Se vuoi parlarmi di un progetto o semplicemente scrivermi, <br> puoi farlo qui.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="uxCol">
+            <p class="uxKicker">Contact</p>
+            <h1 class="uxH1">Entriamo in contatto.</h1>
+            <p class="uxSub">Se vuoi parlarmi di un progetto o semplicemente scrivermi, <br> puoi farlo qui.</p>
 
-        <form class="contactForm" action="#" method="post" autocomplete="on">
-          <div class="contactForm__row">
-            <label class="srOnly" for="cf-name">Nome</label>
-            <input id="cf-name" name="name" type="text" placeholder="Nome" required>
+            <form class="contactForm" action="#" method="post" autocomplete="on">
+              <div class="contactForm__row">
+                <label class="srOnly" for="cf-name">Nome</label>
+                <input id="cf-name" name="name" type="text" placeholder="Nome" required>
 
-            <label class="srOnly" for="cf-email">Email</label>
-            <input id="cf-email" name="email" type="email" placeholder="Email" required>
+                <label class="srOnly" for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" placeholder="Email" required>
+              </div>
+
+              <label class="srOnly" for="cf-message">Messaggio</label>
+              <textarea id="cf-message" name="message" rows="5" placeholder="Scrivimi un messaggio..." required></textarea>
+
+              <div class="contactForm__actions">
+                <button class="btn btn--primary" type="submit">Invia</button>
+                <a class="btn btn--secondary" href="https://www.linkedin.com/in/ilaria-mansi/" target="_blank" rel="noopener">
+                  Oppure scrivimi su LinkedIn
+                </a>
+              </div>
+            </form>
           </div>
-
-          <label class="srOnly" for="cf-message">Messaggio</label>
-          <textarea id="cf-message" name="message" rows="5" placeholder="Scrivimi un messaggio..." required></textarea>
-
-          <div class="contactForm__actions">
-            <button class="btn btn--primary" type="submit">Invia</button>
-            <a class="btn btn--secondary" href="https://www.linkedin.com/in/ilaria-mansi/" target="_blank" rel="noopener">
-              Oppure scrivimi su LinkedIn
-            </a>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 </main>
 
-       
-  </main>
+  
 <footer class="footer footer--simple" id="contact" aria-labelledby="footerTitle">
   <img class="footer__arch" src="assets/img/home/art.jpg" alt="" aria-hidden="true">
 

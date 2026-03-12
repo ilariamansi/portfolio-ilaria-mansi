@@ -1,19 +1,7 @@
-/* =========================================================
-   project.css — CLEAN REBUILD (4 progetti)
-   - Griglia testi = allineata al logo (.container)
-   - Hero unificata (full-bleed + altezza uguale)
-   - Sezioni con gap ridotto
-   - Figure dentro griglia (NON full-bleed)
-========================================================= */
-
-/* -------------------------
-   0) Base: griglia testi
-------------------------- */
 .project{
   padding-top: var(--nav-h);
 }
 
-/* pWrap = stessa logica della .container (allineata al logo) */
 .project .pWrap,
 .project .pWrap--narrow{
   width: min(var(--max), 100%);
@@ -22,29 +10,11 @@
   padding-right: var(--pad-x);
 }
 
-/* -------------------------
-   1) Spazi tra sezioni (ridotti)
-------------------------- */
-.project .pSection{
-  padding: clamp(34px, 5vw, 72px) 0;
-  margin: 0;
-}
 
-/* Se serve più aria solo prima del footer */
-.project section[aria-label="Risultato"]{
-  padding-bottom: clamp(70px, 8vw, 120px);
-}
-
-/* -------------------------
-   2) HERO UNIFICATA (tutti i progetti)
-   Cover full-bleed + stessa altezza ovunque
-------------------------- */
 .project .pHero{
   padding: 0;
   margin: 0;
 }
-
-/* full-bleed reale */
 .project .pHero__media{
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -64,28 +34,23 @@
 .project .pHero__copy{
   padding: clamp(22px, 4vw, 44px) 0 0;
 }
-
-/* mobile */
-@media (max-width: 980){
+@media (max-width: 980px){
   .project .pHero__media img{
     height: clamp(420px, 62vh, 560px);
   }
 }
 
-/* -------------------------
-   3) Componenti comuni (figure, overlay, grid)
-------------------------- */
+
 .project{
   --p-radius: 18px;
   --p-shadow: 0 26px 70px rgba(0,0,0,.45);
 }
 
-/* Header testo sopra figure */
+
 .project .pHeader{
   margin: 0 0 18px;
 }
 
-/* Figure standard (dentro griglia) */
 .project .pFigure{
   position: relative;
   margin: 18px 0 0;
@@ -98,14 +63,12 @@
   box-shadow: var(--p-shadow);
 }
 
-/* immagini */
 .project .pFigure img{
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* caption overlay */
 .project .pFigure__cap{
   position: absolute;
   inset: 0;
@@ -134,7 +97,6 @@
   opacity: .98;
 }
 
-/* griglia 2 colonne (LMSC + Ecodream ecc.) */
 .project .pTwoCol{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -142,19 +104,18 @@
   align-items: start;
 }
 
-@media (max-width: 980){
+@media (max-width: 980px){
   .project .pTwoCol{
     grid-template-columns: 1fr;
   }
 }
 
-/* Stack immagini (social ecc.) */
+
 .project .pStack{
   display: grid;
   gap: clamp(16px, 3vw, 26px);
 }
 
-/* Pills + CTA row */
 .project .pMeta{
   margin-top: 16px;
   display: flex;
@@ -170,15 +131,15 @@
   flex-wrap: wrap;
 }
 
-/* su mobile: CTA/pills a sinistra (più leggibile) */
-@media (max-width: 980){
+
+@media (max-width: 980px){
   .project .pMeta,
   .project .pCtaRow{
     justify-content: flex-start;
   }
 }
 
-/* Figure “Design System” (blocca palette/tipografia enormi) */
+
 .project .pFigure.pFigure--ds{
   padding: 18px;
 }
@@ -190,7 +151,7 @@
   object-fit: contain !important;
 }
 
-@media (max-width: 980){
+@media (max-width: 980px){
   .project .pFigure.pFigure--ds img{
     height: 220px !important;
     max-height: 220px !important;
@@ -201,10 +162,6 @@
   .project{ --p-radius: 14px; }
 }
 
-/* =========================================================
-   4) TYPOGRAPHY per progetto
-   (mantengo lo stile che avevi: Fraunces + Manrope)
-========================================================= */
 
 /* ---------- MEDITACTIVE ---------- */
 .project--meditactive{ padding-top: 0; }
@@ -269,10 +226,9 @@
 }
 .project--meditactive .pIntroCenter p + p{ margin-top: 18px; }
 
-/* eccezione object-position se vuoi */
 .project--meditactive .pHero__media img{ object-position: center 70%; }
 
-/* logo img */
+
 .project--meditactive .pLogoImg{
   width: min(700px, 92%);
   height: auto;
@@ -280,7 +236,7 @@
   margin: 18px auto 0;
 }
 
-/* caption color su meditactive (avevi testo scuro) */
+
 .project--meditactive .pFigure__cap{
   color: #0b0910;
 }
@@ -301,21 +257,21 @@
   align-items: center;
 }
 
-@media (max-width: 980){
+@media (max-width: 980px){
   .project--meditactive .pUi{
     grid-template-columns: 1fr;
   }
 }
 .project--meditactive .pUi .pFigure{
-  margin: 0;                 /* niente stacco extra */
+  margin: 0;                
 }
 
 .project--meditactive .pUi .pFigure img{
   width: 160%;
-  max-width: 800px;          /* regola qui la “grandezza” */
+  max-width: 800px;          
   height: auto;
   display: block;
-  margin-inline: auto;       /* centro nella colonna */
+  margin-inline: auto;      
 }
 @media (max-width: 980px){
 
@@ -404,10 +360,10 @@
 }
 .project--lookbook .pList li + li{ margin-top: 8px; }
 
-/* hero crop lookbook */
+
 .project--lookbook .pHero__media img{ object-position: center 10%; }
 
-/* overlay bianco su lookbook */
+
 .project--lookbook .pFigure__cap{ color: #fff; }
 
 /* ---------- LMSC ---------- */
@@ -477,7 +433,6 @@
   opacity: .92;
 }
 
-/* liste */
 .project--lmsc .pList{
   margin: 12px 0 0;
   padding-left: 18px;
@@ -488,7 +443,7 @@
 }
 .project--lmsc .pList li + li{ margin-top: 8px; }
 
-/* overlay bianco */
+
 .project--lmsc .pFigure__cap{ color: #fff; }
 
 /* ---------- ECODREAM ---------- */
@@ -549,87 +504,94 @@
 }
 .project--ecodream .pIntroCenter p + p{ margin-top: 18px; }
 
-/* overlay scuro o chiaro: scegli tu.
-   Se le tue immagini hanno overlay chiaro, metti #0b0910.
-   Se lo vuoi bianco come lookbook, metti #fff. */
+
 .project--ecodream .pFigure__cap{ color: #0b0910; }
 
-/* Se hai un pezzo “PROTOTIPO” con layout testo+immagine, puoi usare questa griglia */
 .project--ecodream .pProto{
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px;
 }
 
-@media (max-width: 980){
+@media (max-width: 980px){
   .project--ecodream .pLead{ text-align: left; margin-inline: 0; }
   .project--lmsc .pLead{ text-align: left; margin-inline: 0; }
   .project--lookbook .pLead{ text-align: left; margin-inline: 0; }
   .project--meditactive .pLead{ text-align: left; margin-inline: 0; }
 }
-/* =========================================================
-   TUNING — tutti i progetti
-   1) meno gap tra sezioni
-   2) più aria prima dell’ultima CTA
-   3) niente background “trasparente” su ds LMSC e anteprima Lookbook
-   4) bullet elenchi più piccoli
-========================================================= */
 
-/* 1) GAP sezioni: riduci ancora (prima era 34–72) */
 .project .pSection{
   padding: clamp(26px, 4vw, 56px) 0;
 }
 
-/* (opzionale) un filo più aria solo prima del footer */
 .project section[aria-label="Risultato"]{
   padding-bottom: clamp(60px, 7vw, 110px);
 }
 
-/* 2) CTA finale: più stacco dal testo (vale per tutti) */
 .project .pUi__cta,
 .project .pResult__cta{
-  margin-top: 32px; /* prima era ~26: ora respira */
+  margin-top: 32px; 
 }
 
-/* se in qualche pagina hai la CTA dentro .pCtaRow in basso */
+
 .project .pCtaRow{
   margin-top: 20px;
 }
 
-/* 3) Rimuovi background trasparente dietro:
-   - LMSC: palette/tipografia (pFigure--ds)
-   - Lookbook: anteprima desktop (pFigure--soft) */
 .project--lmsc .pFigure.pFigure--ds{
   background: transparent !important;
   box-shadow: none !important;
-  padding: 0 !important;          /* se vuoi immagine “pulita” */
+  padding: 0 !important;       
 }
 
-/* se vuoi mantenere un po’ di respiro senza background */
+
 .project--lmsc .pFigure.pFigure--ds img{
   height: 260px !important;
   object-fit: contain !important;
 }
 
-/* Lookbook: anteprima desktop — togli il fondino */
 .project--lookbook .pFigure.pFigure--soft{
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* 4) Bullet più piccoli (UL/OL) */
 .project .pList{
-  padding-left: 16px; /* meno indent */
+  padding-left: 16px; 
 }
 
 .project .pList li::marker{
-  font-size: .72em;   /* pallino/numero più piccolo */
+  font-size: .72em;   
 }
 
-/* (opzionale) se vuoi anche meno spazio tra righe lista */
+
 .project .pList li + li{
   margin-top: 6px;
 }
+/* =========================
+   LMSC MOBILE FIX
+========================= */
+@media (max-width: 980px){
+
+  .project--lmsc .pStack2{
+    grid-template-columns: 1fr;
+    gap: 1px;
+    justify-items: left;
+  }
+
+}
+
+  /* PALETTE più piccola */
+  .project--lmsc img[alt*="Palette"]{
+    width: 70%;
+    max-width: 120px;
+  }
+
+  /* TIPOGRAFIA più grande */
+  .project--lmsc img[alt*="Tipografia"]{
+    width: 90%;
+    max-width: 400px;
+  }
+
 
 /* =========================
    TORNA SU
@@ -683,15 +645,4 @@
     padding:20px 0 40px;
   }
 }
-/* FIX HARD — About "Chi sono" 1/3 - 2/3 */
-body.is-about section[aria-label="Chi sono"] .uxGrid2{
-  display: grid !important;
-  grid-template-columns: 1fr 2fr !important;
-  align-items: start;
-}
 
-@media (max-width:980px){
-  body.is-about section[aria-label="Chi sono"] .uxGrid2{
-    grid-template-columns: 1fr !important;
-  }
-}
