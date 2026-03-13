@@ -264,7 +264,9 @@ body:not(.is-home) .content{
 
 @media (max-width: 900px){
   .nav__links{ display: none; 
-  opacity: 1;
+  }
+  .nav__links a{ color: #EDE6DD;
+    opacity: 1;
   }
   .nav__burger{ display: grid; place-items: center; }
 
